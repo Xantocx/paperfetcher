@@ -14,11 +14,11 @@ import warnings
 from tqdm import tqdm
 from stqdm import stqdm
 
-from paperfetcher import GlobalConfig
-from paperfetcher.apiclients import CrossrefQuery, COCIQuery
-from paperfetcher.content_negotiators import crossref_negotiate_ris
-from paperfetcher.datastructures import DOIDataset, RISDataset
-from paperfetcher.exceptions import SearchError, ContentNegotiationError, RISParsingError
+from . import GlobalConfig
+from .apiclients import CrossrefQuery, COCIQuery
+from .content_negotiators import crossref_negotiate_ris
+from .datastructures import DOIDataset, RISDataset
+from .exceptions import SearchError, ContentNegotiationError, RISParsingError
 
 # Logging
 logger = logging.getLogger(__name__)
@@ -139,6 +139,7 @@ class CrossrefBackwardReferenceSearch:
         reference_dois = []
         for dict in doi_dicts:
             ref_doi = dict.get("DOI", None)
+            if ref_doi is None: dict.get("key", None)
             if ref_doi is not None:
                 reference_dois.append(ref_doi)
             else:

@@ -8,8 +8,8 @@ import logging
 
 import rispy
 
-from paperfetcher.apiclients import CrossrefQuery
-from paperfetcher.exceptions import ContentNegotiationError, RISParsingError
+from .apiclients import CrossrefQuery
+from .exceptions import ContentNegotiationError, RISParsingError
 
 # Logging
 logger = logging.getLogger(__name__)

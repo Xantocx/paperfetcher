@@ -8,8 +8,8 @@ import logging
 import requests
 import sys
 
-from paperfetcher import GlobalConfig
-from paperfetcher.exceptions import QueryError
+from . import GlobalConfig
+from .exceptions import QueryError
 
 # Logging
 logger = logging.getLogger(__name__)

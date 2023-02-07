@@ -11,8 +11,8 @@ import pandas as pd
 import rispy
 from rispy.config import LIST_TYPE_TAGS, TAG_KEY_MAPPING
 
-from paperfetcher import GlobalConfig
-from paperfetcher.exceptions import DatasetError
+from . import GlobalConfig
+from .exceptions import DatasetError
 
 # Logging
 logger = logging.getLogger(__name__)

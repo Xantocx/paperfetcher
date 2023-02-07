@@ -12,11 +12,11 @@ import warnings
 from tqdm import tqdm
 from stqdm import stqdm
 
-from paperfetcher import GlobalConfig
-from paperfetcher.apiclients import CrossrefQuery
-from paperfetcher.content_negotiators import crossref_negotiate_ris
-from paperfetcher.datastructures import DOIDataset, CitationsDataset, RISDataset
-from paperfetcher.exceptions import SearchError
+from . import GlobalConfig
+from .apiclients import CrossrefQuery
+from .content_negotiators import crossref_negotiate_ris
+from .datastructures import DOIDataset, CitationsDataset, RISDataset
+from .exceptions import SearchError
 
 # Logging
 logger = logging.getLogger(__name__)
